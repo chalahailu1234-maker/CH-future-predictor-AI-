@@ -1,0 +1,249 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  }
+
+:root {
+--bg: #080d1b;
+--card: #111a2e;
+--input: #0a1224;
+--blue: #2878ff;
+--purple: #8b5cf6;
+--text: #f4f7ff;
+--muted: #a6b2ca;
+--border: #263653;
+--success: #55d6a5;
+}
+
+body {
+font-family: Arial, sans-serif;
+background: var(--bg);
+color: var(--text);
+min-height: 100vh;
+line-height: 1.6;
+}
+
+header {
+text-align: center;
+padding: 35px 16px;
+background: linear-gradient(135deg, #102b63, #54218b);
+border-bottom: 1px solid var(--border);
+}
+
+header h1 {
+font-size: 27px;
+margin-bottom: 8px;
+}
+
+header p {
+color: #d6e2ff;
+}
+
+main {
+width: 100%;
+max-width: 760px;
+margin: 25px auto;
+padding: 0 15px;
+}
+
+.card {
+background: var(--card);
+border: 1px solid var(--border);
+border-radius: 18px;
+padding: 22px;
+margin-bottom: 22px;
+box-shadow: 0 8px 25px #00000025;
+}
+
+.card h2 {
+font-size: 21px;
+margin-bottom: 18px;
+}
+
+label {
+display: block;
+margin: 15px 0 8px;
+color: #d9e5ff;
+font-weight: bold;
+}
+
+select,
+textarea {
+width: 100%;
+padding: 14px;
+background: var(--input);
+color: var(--text);
+border: 1px solid #35486b;
+border-radius: 10px;
+font-size: 16px;
+outline: none;
+}
+
+select:focus,
+textarea:focus {
+border-color: var(--blue);
+}
+
+textarea {
+min-height: 125px;
+resize: vertical;
+margin-bottom: 18px;
+}
+
+button {
+width: 100%;
+padding: 15px;
+background: linear-gradient(100deg, var(--blue), var(--purple));
+color: white;
+border: none;
+border-radius: 11px;
+font-size: 17px;
+font-weight: bold;
+cursor: pointer;
+transition: transform 0.2s;
+}
+
+button:active {
+transform: scale(0.98);
+}
+
+.result {
+border-color: #405a8b;
+}
+
+#predictionText {
+color: #dce7ff;
+margin-bottom: 18px;
+overflow-wrap: anywhere;
+}
+
+.probability,
+.confidence {
+display: flex;
+justify-content: space-between;
+align-items: center;
+gap: 10px;
+padding: 14px;
+margin-top: 12px;
+background: var(--input);
+border-radius: 10px;
+border: 1px solid var(--border);
+}
+
+.probability strong {
+color: var(--success);
+font-size: 20px;
+}
+
+.confidence strong {
+color: #b9a0ff;
+}
+
+.steps {
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+gap: 12px;
+}
+
+.steps div {
+text-align: center;
+background: var(--input);
+padding: 17px 8px;
+border: 1px solid var(--border);
+border-radius: 12px;
+}
+
+.steps span {
+font-size: 25px;
+}
+
+.steps p {
+font-size: 14px;
+color: var(--muted);
+margin-top: 5px;
+}
+
+/* =========================
+PREDICTION DASHBOARD
+========================= */
+
+.dashboard {
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+gap: 12px;
+}
+
+.stat {
+text-align: center;
+padding: 18px 10px;
+background: var(--input);
+border: 1px solid var(--border);
+border-radius: 12px;
+}
+
+.stat span {
+font-size: 25px;
+}
+
+.stat strong {
+display: block;
+font-size: 24px;
+margin: 5px 0;
+}
+
+.stat p {
+color: var(--muted);
+font-size: 13px;
+}
+
+/* =========================
+FOOTER
+========================= */
+
+footer {
+text-align: center;
+padding: 25px 15px;
+color: var(--muted);
+font-size: 13px;
+}
+
+/* =========================
+MOBILE
+========================= */
+
+@media (max-width: 400px) {
+
+header h1 {
+    font-size: 23px;
+}
+
+header p {
+    font-size: 14px;
+}
+
+main {
+    padding: 0 10px;
+}
+
+.card {
+    padding: 16px;
+}
+
+.card h2 {
+    font-size: 19px;
+}
+
+.dashboard {
+    gap: 8px;
+}
+
+.stat {
+    padding: 15px 5px;
+}
+
+.stat strong {
+    font-size: 21px;
+}
+
+}
