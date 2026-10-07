@@ -1,0 +1,9 @@
+{
+  "name": "ch-future-predictor-ai",
+  "version": "1.0.0",
+  "description": "CH Future Predictor AI",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  }
+}
