@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>CH Future Predictor AI</title>
+
+    <link rel="stylesheet" href="./style.css">
+
+</head>
+
+<body>
+
+<header>
+
+    <h1>🔮 CH Future Predictor AI</h1>
+
+    <p>Predict the future using data & patterns</p>
+
+</header>
+
+
+<main>
+
+    <!-- Prediction Input -->
+    <section class="card">
+
+        <h2>🔮 Make a Prediction</h2>
+
+        <label>What do you want to predict?</label>
+
+        <select id="predictionType">
+
+            <option value="price">📈 Price</option>
+
+            <option value="weather">🌦️ Weather</option>
+
+            <option value="football">⚽ Football</option>
+
+            <option value="study">📚 Study Result</option>
+
+            <option value="other">📊 Other</option>
+
+        </select>
+
+
+        <label>Enter your data</label>
+
+        <textarea
+            id="dataInput"
+            placeholder="Example: Today = 100, Yesterday = 95, Last week = 90">
+        </textarea>
+
+
+        <button onclick="makePrediction()">
+
+            🔮 Predict Future
+
+        </button>
+
+    </section>
+
+
+    <!-- Prediction Result -->
+    <section class="result card" id="result">
+
+        <h2>🔮 Prediction Result</h2>
+
+        <p id="predictionText">
+
+            Your prediction will appear here.
+
+        </p>
+
+
+        <div class="probability">
+
+            <span>Probability</span>
+
+            <strong id="probability">
+
+                --%
+
+            </strong>
+
+        </div>
+
+
+        <div class="confidence">
+
+            <span>Confidence</span>
+
+            <strong id="confidence">
+
+                --
+
+            </strong>
+
+        </div>
+
+    </section>
+
+
+    <!-- How It Works -->
+    <section class="card">
+
+        <h2>📊 How It Works</h2>
+
+        <div class="steps">
+
+            <div>
+
+                <span>1️⃣</span>
+
+                <p>Enter data</p>
+
+            </div>
+
+
+            <div>
+
+                <span>2️⃣</span>
+
+                <p>Analyze patterns</p>
+
+            </div>
+
+
+            <div>
+
+                <span>3️⃣</span>
+
+                <p>Generate prediction</p>
+
+            </div>
+
+
+            <div>
+
+                <span>4️⃣</span>
+
+                <p>Show probability</p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Prediction Dashboard -->
+    <section class="card">
+
+        <h2>📊 Prediction Dashboard</h2>
+
+        <div class="dashboard">
+
+            <div class="stat">
+
+                <span>🔢</span>
+
+                <strong id="totalPredictions">
+                    0
+                </strong>
+
+                <p>Total</p>
+
+            </div>
+
+
+            <div class="stat">
+
+                <span>📈</span>
+
+                <strong id="risingPredictions">
+                    0
+                </strong>
+
+                <p>Rising</p>
+
+            </div>
+
+
+            <div class="stat">
+
+                <span>📉</span>
+
+                <strong id="fallingPredictions">
+                    0
+                </strong>
+
+                <p>Falling</p>
+
+            </div>
+
+
+            <div class="stat">
+
+                <span>📊</span>
+
+                <strong id="averageProbability">
+                    0%
+                </strong>
+
+                <p>Average</p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Prediction History -->
+    <section class="card">
+
+        <h2>📜 Prediction History</h2>
+
+        <div id="history">
+
+            <p>No predictions yet.</p>
+
+        </div>
+
+
+        <button onclick="clearHistory()">
+
+            🗑️ Clear History
+
+        </button>
+
+    </section>
+
+</main>
+
+
+<footer>
+
+    <p>
+        CH Future Predictor AI © 2026
+    </p>
+
+    <p>
+        Prediction is an estimate, not a guarantee.
+    </p>
+
+</footer>
+
+
+<!-- JavaScript -->
+<script src="./script.js"></script>
+
+</body>
+
+</html>
